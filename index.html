@@ -29,19 +29,33 @@
 
 <body>
   <div id="demo">
-    <h1>Latest Vue.js Commits</h1>
-    <template v-for="branch in branches">
-      <input type="radio" :id="branch" :value="branch" name="branch" v-model="currentBranch">
-      <label :for="branch">{{ branch }}</label>
+    <h1>perceptor: data center wide vulnerbility rollup</h1>
+    <template v-for="n in ns">
+      <input type="radio" :id="n" :value="n" name="ns" v-model="currentNs">
+      <label :for="currentNs">{{ n }}</label>
+<br>    </template>
+    <H2> Pods </H2>
+    <template v-for="p in podss">
+      <input type="radio" :id="p" :value="p" name="p" v-model="currentPod">
+      <label :for="currentPod">{{ p }}</label>
+      <br>
     </template>
-    <p>vuejs/vue@{{ currentBranch }}</p>
-    <ul>
-      <li v-for="record in commits">
-        <a :href="record.html_url" target="_blank" class="commit">{{ record.sha.slice(0, 7) }}</a> - <span class="message">{{ record.commit.message | truncate }}</span>
-        <br> by <span class="author"><a :href="record.author.html_url" target="_blank">{{ record.commit.author.name }}</a></span> at <span class="date">{{ record.commit.author.date | formatDate }}</span>
-      </li>
-    </ul>
-  </div>
+    <br><br>
+    <h3>vulnerabilities</h3>
+
+<table>
+  <tr>
+  <td>
+    <template v-for="v in vulns">
+      <label :for="v">{{ v }}</label>
+      <br><br>
+    </template>
+  </td>
+</tr>
+</table>
+   </div>
+  <script src="model.js"></script>
+
   <script src="app.js"></script>
 </body>
 <script>
