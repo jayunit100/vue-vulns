@@ -5,7 +5,7 @@ vue vulnerability visualization
 
 Ritght now, the UI for this is really annoyingly cludgey.  Click a namespace, it shows you pods, click a pod, it shows you vulnerabilities.
 
-Look at 
+Run this in your terminal:
 
 ```
 git clone https://github.com/jayunit100/vue-vulns
